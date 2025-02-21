@@ -121,45 +121,54 @@ span{
 
 }
 
-
-.social-media a{
+/* Common Social Media Icon Styles */
+.social-media a, 
+.leetcode-link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 4rem;
   height: 4rem;
   background: transparent;
-  border: .2rem solid var(--main-color);
+  border: 0.2rem solid var(--main-color);
   border-radius: 50%;
-  font-size: 2rem;
-  color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
-  transition: .5s ease;
-
+  transition: 0.5s ease;
+  text-align: center;
 }
 
-.social-media a:hover {
-  background : var(--main-color);
+/* Ensure All FontAwesome Icons (LinkedIn, GitHub, HackerRank) are White */
+.social-media a i {
+  font-size: 2.4rem; /* Standardized Size */
+  color: white;  /* Make all icons white */
+  transition: 0.3s ease-in-out;
+}
+
+/* LeetCode Icon Adjustments */
+.leetcode-link img {
+  width: 2.6rem;  
+  height: 2.6rem;
+  filter: brightness(0) invert(1); /* Keeps the icon white */
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  position: relative;
+  top: 0.1rem; /* Aligns with other icons */
+}
+
+/* Hover Effects */
+.social-media a:hover, 
+.leetcode-link:hover {
+  background: var(--main-color);
   color: var(--second-bg-color);
   box-shadow: 0 0 1rem var(--main-color);
-
 }
 
-.social-media a i {
-  font-size: 2rem; /* Ensure all icons are same size */
-}
-
-.leetcode-icon {
-  width: 4rem;
-  height: 4rem;
-  filter: invert(1); /* Optional: Adjust color to match other icons */
-  display: inline-block;
-  vertical-align: middle;
-  transition: transform 0.3s ease-in-out;
-}
-
-.leetcode-link:hover .leetcode-icon {
+/* Hover Effect: Icon Scaling */
+.social-media a:hover i, 
+.leetcode-link:hover img {
   transform: scale(1.2);
+  filter: brightness(0);
 }
 
 
@@ -214,92 +223,105 @@ span{
   margin: 2rem 0 3rem;
 }
 
-
 .skills {
   text-align: center;
-  padding: 10rem 9% 2rem;
+  padding: 8rem 9%;
   background: var(--bg-color);
 }
 
 .skills .heading {
   font-size: 4.5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
 }
 
 .skills-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.skills-box.left {
+  flex-direction: row;
   background: var(--second-bg-color);
-  padding: 3rem 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  border: .2rem solid var(--bg-color);
-  transition: .5s ease;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
 
-.skills-box:hover {
-  border-color: var(--main-color);
-  transform: scale(1.05);
+.skills-box.right {
+  flex-direction: row-reverse;
+  background: var(--third-bg-color);
 }
 
-.skills-box h3 {
-  font-size: 2.6rem;
+.skills-box i {
+  font-size: 3rem;
+  color: var(--main-color);
+  margin: 1rem;
+}
+
+.skills-content {
+  text-align: left;
+  max-width: 60%;
+}
+
+.skills-content h3 {
+  font-size: 2rem;
   color: var(--main-color);
   margin-bottom: 1rem;
 }
 
-.skills-box p {
-  font-size: 1.6rem;
+.skills-content p {
+  font-size: 1.4rem;
   color: var(--text-color);
+  line-height: 1.5;
+}
+
+.skills-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade-In Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
-  .skills {
-      padding-bottom: 7rem;
-  }
-}
-
 @media (max-width: 768px) {
-  .skills-container {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .skills-box {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+  }
+
+  .skills-content {
+      text-align: center;
+      max-width: 100%;
   }
 }
-
-@media (max-width: 450px) {
-  .skills-container {
-      grid-template-columns: 1fr;
-  }
-}
-
-
-/* Responsive Design */
-@media (max-width: 991px) {
-  .skills {
-      padding-bottom: 7rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-container {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
-@media (max-width: 450px) {
-  .skills-container {
-      grid-template-columns: 1fr;
-  }
-}
-
-
 .services h2{
   margin-bottom: 5rem;
 }

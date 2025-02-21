@@ -408,24 +408,25 @@ span{
   color: var(--second-bg-color);
 }
 
-.contact h2{
+.contact h2 {
   margin-bottom: 3rem;
 }
-.contact form{
+
+.contact .contact-container {
   max-width: 70rem;
   margin: 1rem auto;
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.contact form .input-box{
+.contact .input-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.contact form .input-box input,
-.contact form textarea{
+.contact .input-box input,
+.contact textarea {
   width: 100%;
   padding: 1.5rem;
   font-size: 1.6rem;
@@ -433,19 +434,35 @@ span{
   background: var(--second-bg-color);
   border-radius: .8rem;
   margin: .7rem 0;
+  border: none;
+  outline: none;
 }
 
-.contact form .input-box input{
+.contact .input-box input {
   width: 49%;
 }
 
-.contact form textarea{
+.contact textarea {
   resize: none;
 }
-.contact form .btn{
+
+/* Style the "Send Message" button */
+.contact .btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: var(--main-color);
+  border-radius: .8rem;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
   margin-top: 2rem;
-  cursor: pointer;
 }
+
+.contact .btn:hover {
+  background: var(--hover-color);
+}
+
 .footer{
   display: flex;
   justify-content: space-between;

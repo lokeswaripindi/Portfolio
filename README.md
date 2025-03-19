@@ -1,34 +1,35 @@
 Portfolio Website
 
-🎯 Objective
-Create a professional portfolio website to showcase personal and professional achievements. The website serves as an online resume that highlights technical expertise, projects, and contact information effectively.
+Objective
 
-✨ Features
-About Section:
-A brief introduction covering academic background, career interests, and professional aspirations.
+Create a professional portfolio website to showcase my skills, projects, and achievements. This website serves as an online resume highlighting my expertise in software development, machine learning, and full-stack web development.
 
-Skills:
-Showcase of technical and non-technical skills, including programming languages, frameworks, and analytical tools.
 
-Projects:
-Display top projects with concise descriptions, technologies used, and links to GitHub repositories or live demos.
+Features
 
-Contact Form:
-A form allowing visitors to reach out with queries or collaboration opportunities.
+About Section: Introduction with details about my academic background and career aspirations.
+Skills: Technical and non-technical skills including programming languages, frameworks, and analytical tools.
+Projects: List of top projects with descriptions, technologies used, and links to GitHub repositories.
+Contact Form: Allows visitors to connect with me for collaboration or inquiries.
+Responsive Design: Ensures a seamless viewing experience on all devices (mobile, tablet, desktop).
 
-Responsive Design:
-Ensures seamless viewing experience on devices of all sizes (mobile, tablet, desktop).
 
-🛠️ Preferred Tech Stack
+Tech Stack
 Frontend: HTML, CSS, JavaScript
-Frameworks/Libraries: React.js (optional), Bootstrap/Materialize (optional for styling)
-Version Control: Git, GitHub for repository management
-Deployment: GitHub Pages for hosting
-📚 Code Guidelines
-Clean, well-structured, and easy-to-maintain code.
-Proper comments and documentation for key sections.
-Modular CSS and JavaScript for maintainability and scalability.
-📊 Evaluation Criteria
-Functionality: Ensure all sections, links, and interactive elements work smoothly.
-Design & Responsiveness: Visually appealing, easy navigation, and optimized for different devices.
-Code Quality: Follows best practices, adheres to coding standards, and includes proper documentation.
+Frameworks/Libraries: Bootstrap/Materialize (optional for styling)
+Version Control: Git, GitHub
+Deployment: GitHub Pages
+
+
+Code Guidelines
+Clean and well-structured code with proper comments.
+Modular CSS and JavaScript for better maintainability.
+How to Run
+Clone the repository:
+git clone https://github.com/lokeswaripindi/Portfolio.git
+
+Open index.html in your browser or deploy the project using GitHub Pages.
+
+
+Contact
+For any queries or collaboration opportunities, feel free to email me.
